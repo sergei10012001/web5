@@ -1,0 +1,12 @@
+.post {
+   width: 40%;
+   background-color: #90EE90;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   padding-left: 1%;
+   overflow: hidden;
+   border-radius: 15px;
+   margin-bottom: 40px;
+   margin-top:1.5%;
+}

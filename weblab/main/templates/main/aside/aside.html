@@ -1,0 +1,18 @@
+{% load static %}
+
+<aside>
+    <div class="aside__body">
+        <span class="aside__title">Powered by <br>Sergey Bondarev </span>
+        <h4 class="aside__subtitle">Menu </h4>
+        <nav class="aside__navigation">
+            <a href="{% url 'home' %}" class="aside__link"><i class="fas fa-home"></i> home</a>
+            <a href="{% url 'posts' %}" class="aside__link"><i class="fas fa-clipboard"></i> posts</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'create' %}" class="aside__link"><i class="fas fa-plus"></i> add post</a>
+            <a href="{% url 'account_logout' %}" class="aside__link"><i class="far fa-times-circle"></i> log out</a>
+            {% else %}
+            <a href="{% url 'account_login' %}" class="aside__link"><i class="fas fa-door-open"></i> log in</a>
+            {% endif %}
+        </nav>
+    </div>
+</aside>
